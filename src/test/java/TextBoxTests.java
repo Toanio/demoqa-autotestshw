@@ -35,14 +35,14 @@ public class TextBoxTests {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(email);
-        $("[for=gender-radio-1]").click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue(phoneNumber);
         $("#uploadPicture").uploadFromClasspath("1.jpg");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(8);
         $(".react-datepicker__year-select").selectOptionByValue("1995");
         $(byText("30")).click();
-        $("[for=hobbies-checkbox-1]").click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#dateOfBirthInput").click();
         $("#state").click();
         $(byText(state)).click();
