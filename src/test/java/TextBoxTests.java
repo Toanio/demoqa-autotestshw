@@ -48,7 +48,8 @@ public class TextBoxTests {
         $(byText(state)).click();
         $("#city").click();
         $(byText(city)).click();
-        $("#subjectsInput").setValue("sdjakdjw").pressEnter();
+        $("#submit").click();
+
 
 
         $(".table").shouldHave(text(firstName),
