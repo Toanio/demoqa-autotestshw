@@ -32,21 +32,21 @@ public class TextBoxTests {
 
         open("/automation-practice-form");
 
-        $("[id=firstName]").setValue(firstName);
-        $("[id=lastName]").setValue(lastName);
-        $("[id=userEmail]").setValue(email);
+        $("#firstName").setValue(firstName);
+        $("#lastName").setValue(lastName);
+        $("#userEmail").setValue(email);
         $("[for=gender-radio-1]").click();
-        $("[id=userNumber]").setValue(phoneNumber);
-        $("[id=uploadPicture]").uploadFromClasspath("1.jpg");
+        $("#userNumber").setValue(phoneNumber);
+        $("#uploadPicture").uploadFromClasspath("1.jpg");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(8);
         $(".react-datepicker__year-select").selectOptionByValue("1995");
         $(byText("30")).click();
         $("[for=hobbies-checkbox-1]").click();
-        $("[id=dateOfBirthInput]").click();
-        $("[id=state]").click();
+        $("#dateOfBirthInput").click();
+        $("#state").click();
         $(byText(state)).click();
-        $("[id=city]").click();
+        $("#city").click();
         $(byText(city)).click();
         $("#subjectsInput").setValue("sdjakdjw").pressEnter();
 
