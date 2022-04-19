@@ -1,5 +1,6 @@
 import com.codeborne.selenide.*;
 import com.codeborne.selenide.selector.ByText;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -21,10 +22,12 @@ public class TextBoxTests {
     @Test
     void studentRegistrationFormTest() {
 
-        String firstName = "Toan";
-        String lastName = "Toan";
-        String email = "test.raketa18@mail.ru";
-        String phoneNumber = "5555555555";
+        Faker faker = new Faker();
+
+        String firstName = faker.name().firstName();
+        String lastName = faker.name().lastName();
+        String email = faker.internet().emailAddress();
+        String phoneNumber = faker.phoneNumber().subscriberNumber(10);
         String state = "Uttar Pradesh";
         String city = "Lucknow";
         String hobbies = "Sports";
@@ -60,5 +63,13 @@ public class TextBoxTests {
                 text(image),
                 text(state),
                 text(city));
+    }
+
+    @Test
+    void actionsTests(){
+        open("https://demoqa.com/buttons");
+        SelenideElement element = $("#rightClickBtn");
+        actions().contextClick(element).perform();
+        $("#rightClickMessage").shouldHave(text("You have done a right click"));
     }
 }
