@@ -18,9 +18,7 @@ public class TextBoxTests {
     
     @Test
     void studentRegistrationFormTest() {
-
         RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-
         registrationFormPage.openPage();
         registrationFormPage.setFirstName();
         registrationFormPage.setLastName();
@@ -34,7 +32,6 @@ public class TextBoxTests {
         registrationFormPage.setCity();
         registrationFormPage.submitBtnClick();
         registrationFormPage.checkTable();
-
     }
 
 }

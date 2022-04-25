@@ -7,22 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class RegistrationFormPage {
-
-    Faker faker = new Faker();
-
-    String firstName = faker.name().firstName();
-    String lastName = faker.name().lastName();
-    String email = faker.internet().emailAddress();
-    String phoneNumber = faker.phoneNumber().subscriberNumber(10);
-    String state = "Uttar Pradesh";
-    String city = "Lucknow";
-    String hobbies = "Sports";
-    String image = "1.jpg";
-    int month = 8;
-    String year = "1995";
-    String day = "30";
-    String gender = "Male";
+public class RegistrationFormPage extends TestData{
 
     public RegistrationFormPage openPage() {
         open("/automation-practice-form");
@@ -100,6 +85,4 @@ public class RegistrationFormPage {
                 text(city));
         return this;
     }
-
-
 }
