@@ -17,4 +17,6 @@ public class TestData {
     String year = "1995";
     String day = "30";
     String gender = "Male";
+    String subject = "English";
+    String currentAddress = faker.address().fullAddress();
 }

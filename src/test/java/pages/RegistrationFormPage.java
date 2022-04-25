@@ -1,6 +1,5 @@
 package pages;
 
-import com.github.javafaker.Faker;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -44,11 +43,21 @@ public class RegistrationFormPage extends TestData{
         return this;
     }
 
+    public RegistrationFormPage setCurrentAddress() {
+        $("#currentAddress").setValue(currentAddress);
+        return this;
+    }
+
     public RegistrationFormPage setDateOfBirth() {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOptionByValue(year);
         $(byText(day)).click();
+        return this;
+    }
+
+    public RegistrationFormPage setSubject() {
+        $("#subjectsInput").setValue("e").pressEnter();
         return this;
     }
 
@@ -80,9 +89,12 @@ public class RegistrationFormPage extends TestData{
                 text(email),
                 text(phoneNumber),
                 text(hobbies),
+                text(subject),
                 text(image),
+                text(currentAddress),
                 text(state),
                 text(city));
+
         return this;
     }
 }

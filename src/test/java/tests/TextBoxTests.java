@@ -26,7 +26,9 @@ public class TextBoxTests {
         registrationFormPage.setGander();
         registrationFormPage.setPhoneNumber();
         registrationFormPage.upLoadPicture();
+        registrationFormPage.setCurrentAddress();
         registrationFormPage.setDateOfBirth();
+        registrationFormPage.setSubject();
         registrationFormPage.setHobbies();
         registrationFormPage.setState();
         registrationFormPage.setCity();
