@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 
 public class TestData {
     Faker faker = new Faker();
-
     String firstName = faker.name().firstName();
     String lastName = faker.name().lastName();
     String email = faker.internet().emailAddress();

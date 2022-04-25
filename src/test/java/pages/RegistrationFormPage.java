@@ -94,7 +94,6 @@ public class RegistrationFormPage extends TestData{
                 text(currentAddress),
                 text(state),
                 text(city));
-
         return this;
     }
 }
