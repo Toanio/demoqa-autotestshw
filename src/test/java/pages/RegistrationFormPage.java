@@ -19,6 +19,10 @@ public class RegistrationFormPage {
     String city = "Lucknow";
     String hobbies = "Sports";
     String image = "1.jpg";
+    int month = 8;
+    String year = "1995";
+    String day = "30";
+    String gender = "Male";
 
     public RegistrationFormPage openPage() {
         open("/automation-practice-form");
@@ -41,7 +45,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage setGander() {
-        $("#genterWrapper").$(byText("Male")).click();
+        $("#genterWrapper").$(byText(gender)).click();
         return this;
     }
 
@@ -51,20 +55,20 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage upLoadPicture() {
-        $("#uploadPicture").uploadFromClasspath("1.jpg");
+        $("#uploadPicture").uploadFromClasspath(image);
         return this;
     }
 
     public RegistrationFormPage setDateOfBirth() {
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption(8);
-        $(".react-datepicker__year-select").selectOptionByValue("1995");
-        $(byText("30")).click();
+        $(".react-datepicker__month-select").selectOption(month);
+        $(".react-datepicker__year-select").selectOptionByValue(year);
+        $(byText(day)).click();
         return this;
     }
 
     public RegistrationFormPage setHobbies() {
-        $("#hobbiesWrapper").$(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText(hobbies)).click();
         return this;
     }
 
@@ -96,8 +100,6 @@ public class RegistrationFormPage {
                 text(city));
         return this;
     }
-
-
 
 
 }
