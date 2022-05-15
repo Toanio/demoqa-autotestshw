@@ -1,22 +1,16 @@
 package tests;
 
 import com.codeborne.selenide.*;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.RegistrationFormPage;
+import pages.TestBase;
+
+@Tag("demoqa")
+public class TextBoxTests extends TestBase {
 
 
-public class TextBoxTests {
-
-
-
-    static void setUp() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-    }
-    
     @Test
+    @DisplayName("Successful fill registration test")
     void studentRegistrationFormTest() {
         RegistrationFormPage registrationFormPage = new RegistrationFormPage();
         registrationFormPage.openPage();
