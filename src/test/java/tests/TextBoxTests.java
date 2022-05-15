@@ -9,7 +9,7 @@ import pages.RegistrationFormPage;
 public class TextBoxTests {
 
 
-    @BeforeAll
+
     static void setUp() {
         Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://demoqa.com";

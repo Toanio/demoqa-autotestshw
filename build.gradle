@@ -8,7 +8,9 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
-
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
 dependencies {
     testImplementation(
             'com.codeborne:selenide:6.4.0',
